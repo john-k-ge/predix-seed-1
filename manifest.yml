@@ -1,13 +1,13 @@
 ---
 applications:
-  - name: predix-seed
+  - name: jk-predix-seed
     buildpack: predix_openresty_buildpack
     path: dist
     memory: 64M
     stack: cflinuxfs2
     services:
-            - your_redis_instance # change this to your redis service instance name
-            - your_view_service_instance # change this to your view service instance name
+            - 20_maggio_redis # change this to your redis service instance name
+            - 20_maggio_views # change this to your view service instance name
     env:
-      UAA_SERVER_URL: https://your-uaa-instance.grc-apps.svc.ice.ge.com # change to your UAA instance url
-      REDIS: redis
+      UAA_SERVER_URL: https://30677bc6-5bd4-4426-a037-c5a7d955d9da.predix-uaa.run.aws-usw02-pr.ice.predix.io # change to your UAA instance url
+      REDIS: redis-2
